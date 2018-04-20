@@ -1,7 +1,8 @@
 package com.jd.jdbc.jest;
 
 /**
- * Created by wjj on 2017/6/22.
+ * @author wanghong12
+ * @date 2018-4-20
  */
 public enum JestType {
     ADD,

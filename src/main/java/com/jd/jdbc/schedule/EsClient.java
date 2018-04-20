@@ -3,21 +3,25 @@ package com.jd.jdbc.schedule;
 import org.elasticsearch.client.Client;
 
 /**
- * @author wangjiajun
- * @date 2017/9/16 11:56
+ * @author wanghong12
+ * @date 2018/4/20 11:56
  */
-public class ESClient {
+public class EsClient {
     private Client client;
-    public ESClient(Client client){
+
+    public EsClient(Client client) {
         this.client = client;
     }
-    public Client getClient(){
+
+    public Client getClient() {
         return this.client;
     }
-    public void setClient(Client client){
+
+    public void setClient(Client client) {
         this.client = client;
     }
-    public void close(){
+
+    public void close() {
         this.client.close();
     }
 }

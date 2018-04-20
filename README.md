@@ -16,7 +16,7 @@
 ```xml
 <bean id="defaulteDataSource-es" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
 		<property name="driverClassName" value="ElasticSearchDriver" />
-		<property name="url" value="${java.url}" />
+		<property name="url" value="${jdbc.url}" />
 		<property name="initialSize" value="2" />
 		<property name="minIdle" value="2" />
 		<property name="maxActive" value="${maxActive}" />
@@ -59,7 +59,7 @@ elasticsearch.properties配置文件是必须的，可以直接如上面代码�
 
 ```properties
 #es java TransportClient address，split by "," if have multi address,eg.jdbc:elasticsearch://ip1:port,ip2:port
-java.url=jdbc:elasticsearch://192.168.70.128:9300
+jdbc.url=jdbc:elasticsearch://192.168.70.128:9300
 #es rest http address，split by "," if have multi address.eg http://ip1:port,http://ip2:port
 http.url=http://192.168.70.128:9200
 #max connection number
