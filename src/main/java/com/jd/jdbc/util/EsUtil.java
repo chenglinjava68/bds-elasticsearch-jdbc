@@ -33,10 +33,10 @@ public class EsUtil {
 
     private static EsClient createClient(String jdbcUrl) {
         if (StringUtils.isBlank(jdbcUrl)) {
-            jdbcUrl = PropertiesUtil.getValue("jdbc.url");
+            jdbcUrl = PropertiesUtils.getValue("jdbc.url");
         }
         TransportClient transportClient = null;
-        String clusterName = PropertiesUtil.getValue("cluster.name");
+        String clusterName = PropertiesUtils.getValue("cluster.name");
 
         Settings settings = Settings.builder()
                 .put("cluster.name", clusterName).build();

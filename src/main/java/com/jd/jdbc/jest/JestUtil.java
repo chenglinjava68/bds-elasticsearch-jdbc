@@ -1,6 +1,6 @@
 package com.jd.jdbc.jest;
 
-import com.jd.jdbc.util.PropertiesUtil;
+import com.jd.jdbc.util.PropertiesUtils;
 import io.searchbox.client.JestClient;
 import io.searchbox.client.JestClientFactory;
 import io.searchbox.client.JestResult;
@@ -65,8 +65,8 @@ public class JestUtil {
                 }
             } else {
                 /**从配置文件中获取配置信息*/
-                jdbcUrl = PropertiesUtil.getValue("http.url");
-                maxActive = PropertiesUtil.getValue("maxActive", maxActive);
+                jdbcUrl = PropertiesUtils.getValue("http.url");
+                maxActive = PropertiesUtils.getValue("maxActive");
             }
         } catch (Exception e) {
             throw new RuntimeException("创建Jest客户端错误，未指定正确的配置属性:http.url或maxActive");
